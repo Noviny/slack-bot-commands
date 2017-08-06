@@ -1,0 +1,51 @@
+{
+  "name": "slack-commander",
+  "version": "0.0.0",
+  "description": "Tool to help quickly construct a slack bot that responds to commands.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "slack",
+    "bot"
+  ],
+  "author": "Ben Conolly",
+  "license": "MIT",
+  "dependencies": {
+    "slack": "^8.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.24.1",
+    "prettier": "^1.5.3",
+    "babel-register": "^6.24.1",
+    "eslint": "^4.3.0",
+    "eslint-config-keystone": "^3.0.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-flowtype": "^2.35.0",
+    "flow-bin": "^0.51.1"
+  },
+  "scripts": {
+    "prepublish": "yarn build",
+    "lint": "eslint .",
+    "build": "babel src -d lib --copyfiles",
+    "precommit": "lint-staged",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "prettier": "prettier --single-quote --trailing-comma es5 --use-tabs --write"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "yarn lint",
+      "git add"
+    ]
+  }
+}
