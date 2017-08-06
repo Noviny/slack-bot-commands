@@ -1,5 +1,5 @@
 {
-  "name": "slack-commander",
+  "name": "slack-bot-commands",
   "version": "0.0.0",
   "description": "Tool to help quickly construct a slack bot that responds to commands.",
   "main": "lib/index.js",
