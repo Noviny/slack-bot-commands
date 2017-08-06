@@ -4,7 +4,9 @@
   "description": "Tool to help quickly construct a slack bot that responds to commands.",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "CHANGELOG.md",
+    "README.md"
   ],
   "keywords": [
     "slack",
