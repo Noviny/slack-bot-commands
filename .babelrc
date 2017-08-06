@@ -1,12 +1,11 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": "4.0.0"
-      },
-      "exclude": ["transform-regenerator"]
-    }],
+    "es2015",
+    "es2016",
+    "es2017",
     "flow"
   ],
-  "plugins": ["transform-es2015-modules-commonjs"]
+  "plugins": [
+    "transform-runtime"
+  ]
 }

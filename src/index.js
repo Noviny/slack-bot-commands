@@ -1,6 +1,8 @@
-import Command from './Command';
-import CommandRunner from './CommandRunner';
-import CommandTester from './CommandTester';
+const Command = require('./Command');
+const CommandRunner = require('./CommandRunner');
+const CommandTester = require('./CommandTester');
 
-export default CommandRunner
-export { Command, CommandTester }
+CommandRunner.Command = Command;
+CommandRunner.CommandTester = CommandTester;
+
+module.exports = CommandRunner;

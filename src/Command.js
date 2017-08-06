@@ -7,7 +7,7 @@ type A = {
 	channel: string,
 };
 
-export default class Command {
+module.exports = class Command {
 	text: string;
 	testRegex: RegExp | undefined;
 	constructor({ text, user, channel }: A) {
@@ -43,4 +43,4 @@ export default class Command {
 			}
 		}
 	}
-}
+};
